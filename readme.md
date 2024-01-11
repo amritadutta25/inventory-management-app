@@ -28,6 +28,7 @@
 
 Below should be a table listing the different routes in your app and their purposes.
 
+### PRODUCT routes:
 | Route Name | Endpoint | Method | Description |
 |------------|----------|--------|-------------|
 | Index | /products | GET | Renders all products on a page|
@@ -37,6 +38,15 @@ Below should be a table listing the different routes in your app and their purpo
 | Create | /products | POST | Creates a new product|
 | Edit | /products/:id/edit | GET | Renders a form to update an existing product |
 | Show | /products/:id | GET | Renders a product on a page|
+
+### USER routes:
+| Route Name | Endpoint | Method | Description |
+|------------|----------|--------|-------------|
+| Signup form | /user/signup | GET | Renders a form to register a new user |
+| Signup | /user/signup | POST | Register a new user |
+| Login form | /user/login | GET | Renders a form to login existing user |
+| Login | /user/login | POST | Login an existing user |
+
 
 ## Design Mockups (Desktop + Mobile)
 
