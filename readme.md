@@ -1,11 +1,11 @@
 # Seal Project 2
 
 - **Your Name:** Amrita Dutta
-- **App Name:**
+- **App Name:** InvenTrack
 - **Description:** A full CRUD app that lets business owners manage their inventory effectively.
 - **Github URL:** https://github.com/amritadutta25/project2
 - **Deployed Website:** https://am-project2.onrender.com
-- **Trello Board:**
+- **Trello Board:** https://trello.com/b/aF2sKWQS/inventory-management-app
 
 ## List of Dependencies
 
