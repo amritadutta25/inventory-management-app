@@ -52,11 +52,14 @@ Below should be a table listing the different routes in your app and their purpo
 
 ##### Mobile Design
 
-![Mobile Design Mockup](./url-to-picture.jpg)
+![Mobile Design Mockup](./images/mockup3.png)
+![Mobile Design Mockup](./images/mockup4.png)
+![Mobile Design Mockup](./images/mockup5.png)
 
 ##### Desktop Design
 
-![Desktop Design Mockup](./url-to-picture.jpg)
+![Desktop Design Mockup](./images/mockup1.png)
+![Desktop Design Mockup](./images/mockup2.png)
 
 ## ERD (Entity Relationship Diagram)
 
