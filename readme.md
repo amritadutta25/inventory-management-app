@@ -1,10 +1,10 @@
 # Seal Project 2
 
-- **Your Name:**
+- **Your Name:** Amrita Dutta
 - **App Name:**
-- **Description:**
-- **Github URL:**
-- **Deployed Website:**
+- **Description:** A full CRUD app that lets business owners manage their inventory effectively.
+- **Github URL:** https://github.com/amritadutta25/project2
+- **Deployed Website:** https://am-project2.onrender.com
 - **Trello Board:**
 
 ## List of Dependencies
@@ -12,10 +12,17 @@
 ##### Node Dependencies (package.json)
 
 - express
+- mongoose
+- dotenv
+- morgan
+- method-override
+- ejs
+- bcrypt
 
 ##### Frontend (if used, ex. jquery, alpine, bootstrap, htmx, etc.)
 
 - alpine
+- jquery
 
 ## Route Map
 
@@ -23,7 +30,13 @@ Below should be a table listing the different routes in your app and their purpo
 
 | Route Name | Endpoint | Method | Description |
 |------------|----------|--------|-------------|
-| Fruit Index | /fruits | GET | Renders all fruits on a page|
+| Index | /products | GET | Renders all products on a page|
+| New | /products/new | GET | Renders a form to create a new product|
+| Delete | /products/:id | DELETE | Deletes a product from database|
+| Update | /products/:id | PUT | Updates existing product|
+| Create | /products | POST | Creates a new product|
+| Edit | /products/:id/edit | GET | Renders a form to update an existing product |
+| Show | /products/:id | GET | Renders a product on a page|
 
 ## Design Mockups (Desktop + Mobile)
 
@@ -39,4 +52,8 @@ Below should be a table listing the different routes in your app and their purpo
 
 This should be a diagram showing your models and any relationships between them.
 
-![Entity Relationship Diagram](./url-to-picture.jpg)
+![Entity Relationship Diagram](./images/Inventory_management_ERD.png)
+
+## Beyond MVP:
+- Send email notifications to business owners when stock is low
+- Feature to place order of products running low in stock
