@@ -1,0 +1,24 @@
+* {
+    outline: 2px dotted green;
+}
+
+/* INDEX Page */
+.index-page {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #ECE2D0;
+}
+
+.product {
+    margin: 10px 5px; /* Adds space around each product card */
+
+    /* setting width and height of product card */
+    width: 320px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
