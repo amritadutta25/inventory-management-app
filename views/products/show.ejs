@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <div class="show-page">
+        <div class="show-product-img">
+            <img src="<%= product.image %>" class="product-img" alt="image">
+        </div>
+        <div class="show-product-details">
+            <div class="product-name">
+                <h3><%= product.name %></h3>
+            </div>
+            <div class="product-desc">
+                <h4><%= product.description%></h4>
+            </div>
+            <div class="product-price">
+                Price: $<%= product.price %>
+            </div>
+            <div class="product-id">
+                Product ID: <%= product.productId %>
+            </div> 
+            <div class="product-catid">
+                Category ID: <%= product.categoryId %>
+            </div> 
+            <div class="stock-quantity">
+                Stock Quanity: <%= product.stockQuantity %> pcs
+            </div>
+        </div>
+    </div>
+</body>
+</html>

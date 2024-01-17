@@ -14,7 +14,7 @@ const seedProducts = [
         categoryId: 102, // Assume 102 is for Sofas & Armchairs
         price: 249.99,
         description: "Compact and comfortable two-seat sofa, perfect for small spaces.",
-        stockQuantity: 50,
+        stockQuantity: 0,
         image: "https://www.ikea.com/in/en/images/products/klippan-2-seat-sofa-bomstad-black__0562963_pe663653_s5.jpg?f=xl"
     },
     {
@@ -73,12 +73,12 @@ const seedProducts = [
     },
     {
         productId: 9,
-        name: "FADO Table Lamp",
-        categoryId: 106, // Kitchen & Appliances
+        name: "FADO Floor Lamp",
+        categoryId: 106, // Lighting
         price: 29.99,
         description: "Creates a soft, cosy mood light in your room.",
         stockQuantity: 150,
-        image: "https://www.ikea.com/in/en/images/products/fado-table-lamp-grey__0606972_pe682642_s5.jpg?f=xl"
+        image: "https://www.ikea.com/in/en/images/products/lergryn-skaftet-floor-lamp-base-arched-beige-black__1009540_pe827681_s5.jpg?f=xl"
     },
     {
         productId: 10,
@@ -156,9 +156,6 @@ mongoose.connection.on("open", async () => {
 
     // Seed Starter Products
     const data = await Product.create(seedProducts)
-
-    console.log("--------PRODUCTS CREATED----------")
-    console.log(data)
 
     // // close the DB connection
     // mongoose.connection.close()
