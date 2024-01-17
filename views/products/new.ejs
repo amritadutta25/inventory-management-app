@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    
+    <div class="form-product-heading">
+        <h1>New Product Page</h1>
+    </div>
+
+    <form class="product-form" action="/products" method="post">
+        <fieldset>
+            <label>Name: <input type="text" name="name" placeholder="Name of product" /></label>
+
+            <label>Product ID: <input type="text" name="productId"/></label>
+            
+            <label>Category: <input type="text" name="category" placeholder="Category of the product"/></label>
+
+            <label>Description: <input type="text" name="description" placeholder="Short description of product" /></label>
+
+            <label>Price: <input type="text" name="price" placeholder="Price of the product per unit"/></label>
+
+            <label>Stock Quantity: <input type="text" name="stockQuantity" placeholder="Number of units in stock"/></label>
+
+            <label>Image URL: <input type="text" name="image" placeholder="Image link of product"/></label>
+
+        </fieldset>
+        <input type="submit" value="Create Product" >
+
+        <br>
+        <a href="/products/"><button>Back to Home</button></a>
+    </form>
+        
+
+</body>
+</html>

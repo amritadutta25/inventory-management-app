@@ -11,6 +11,9 @@ const app = express()
 
 // Middleware
 app.use(express.static("public")) // serve files from public folder
+app.use(morgan("dev")); //logger
+app.use(methodOverride("_method")); // override form submissions
+app.use(express.urlencoded({ extended: true })); // parse urlencoded bodies
 
 // get env variables
 const PORT = process.env.PORT

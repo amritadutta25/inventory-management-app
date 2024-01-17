@@ -2,7 +2,7 @@ const seedProducts = [
     {
         productId: 1,
         name: "BILLY Bookcase",
-        categoryId: 101, // Assume 101 is for Bookcases & Shelving Units
+        category: "Bookcases & Shelving Units",
         price: 59.99,
         description: "A simple and versatile bookcase with adjustable shelves.",
         stockQuantity: 100,
@@ -11,7 +11,7 @@ const seedProducts = [
     {
         productId: 2,
         name: "KLIPPAN Loveseat",
-        categoryId: 102, // Assume 102 is for Sofas & Armchairs
+        category: "Sofas & Armchairs",
         price: 249.99,
         description: "Compact and comfortable two-seat sofa, perfect for small spaces.",
         stockQuantity: 0,
@@ -20,7 +20,7 @@ const seedProducts = [
     {
         productId: 3,
         name: "MALM Bed Frame",
-        categoryId: 103, // Assume 103 is for Beds
+        category: "Beds",
         price: 199.99,
         description: "A sleek, minimalist bed frame with ample under-bed storage.",
         stockQuantity: 75,
@@ -29,7 +29,7 @@ const seedProducts = [
     {
         productId: 4,
         name: "POÄNG Armchair",
-        categoryId: 102, // Sofas & Armchairs
+        category: "Sofas & Armchairs",
         price: 79.99,
         description: "A classic armchair with a unique design and exceptional comfort.",
         stockQuantity: 80,
@@ -38,7 +38,7 @@ const seedProducts = [
     {
         productId: 5,
         name: "LACK Coffee Table",
-        categoryId: 104, // Assume 104 is for Tables & Desks
+        category: "Tables & Desks",
         price: 29.99,
         description: "A simple, low-cost coffee table, available in various colors.",
         stockQuantity: 150,
@@ -47,7 +47,7 @@ const seedProducts = [
     {
         productId: 6,
         name: "KALLAX Shelving Unit",
-        categoryId: 101, // Bookcases & Shelving Units
+        category: "Bookcases & Shelving Units",
         price: 69.99,
         description: "A versatile, open shelving unit for various storage solutions.",
         stockQuantity: 120,
@@ -56,7 +56,7 @@ const seedProducts = [
     {
         productId: 7,
         name: "DOCKSTA Table",
-        categoryId: 104, // Tables & Desks
+        category: "Tables & Desks",
         price: 179.99,
         description: "A round table with a pedestal base, perfect for small dining areas.",
         stockQuantity: 60,
@@ -65,7 +65,7 @@ const seedProducts = [
     {
         productId: 8,
         name: "HEMNES Dresser",
-        categoryId: 105, // Storage & Organization
+        category: "Storage & Organization",
         price: 229.99,
         description: "A traditional style dresser with smooth running drawers.",
         stockQuantity: 40,
@@ -74,7 +74,7 @@ const seedProducts = [
     {
         productId: 9,
         name: "FADO Floor Lamp",
-        categoryId: 106, // Lighting
+        category: "Lighting",
         price: 29.99,
         description: "Creates a soft, cosy mood light in your room.",
         stockQuantity: 150,
@@ -83,7 +83,7 @@ const seedProducts = [
     {
         productId: 10,
         name: "STRANDMON Wing Chair",
-        categoryId: 102, // Sofas & Armchairs
+        category: "Sofas & Armchairs",
         price: 249.99,
         description: "A classic wing chair that offers comfort and a touch of elegance.",
         stockQuantity: 30,
@@ -92,7 +92,7 @@ const seedProducts = [
     {
         productId: 11,
         name: "NORDLI Bed Frame",
-        categoryId: 103, // Beds
+        category: "Beds",
         price: 299.99,
         description: "A modular bed frame with customizable headboards and ample storage.",
         stockQuantity: 70,
@@ -101,7 +101,7 @@ const seedProducts = [
     {
         productId: 12,
         name: "LERHAMN Table",
-        categoryId: 104, // Tables & Desks
+        category: "Tables & Desks",
         price: 99.99,
         description: "A small, sturdy dining table with a traditional look.",
         stockQuantity: 80,
@@ -110,7 +110,7 @@ const seedProducts = [
     {
         productId: 13,
         name: "FRIHETEN Sleeper Sofa",
-        categoryId: 102, // Sofas & Armchairs
+        category: "Sofas & Armchairs",
         price: 499.99,
         description: "A versatile sofa that easily converts into a bed.",
         stockQuantity: 25,
@@ -119,7 +119,7 @@ const seedProducts = [
     {
         productID: 14,
         name: "TRONES Shoe Cabinet",
-        categoryId: 105, // Storage & Organization
+        category: "Storage & Organization",
         price: 39.99,
         description: "A sleek, space-saving shoe cabinet that can also be used for other storage.",
         stockQuantity: 100,
@@ -128,7 +128,7 @@ const seedProducts = [
     {
         productId: 15,
         name: "POÄNG Ottoman",
-        categoryId: 102, // Sofas & Armchairs
+        category: "Sofas & Armchairs",
         price: 49.99,
         description: "A comfortable ottoman that pairs well with POÄNG armchair.",
         stockQuantity: 85,
@@ -157,8 +157,8 @@ mongoose.connection.on("open", async () => {
     // Seed Starter Products
     const data = await Product.create(seedProducts)
 
-    // // close the DB connection
-    // mongoose.connection.close()
+    // close the DB connection
+    mongoose.connection.close()
   } catch (error) {
     console.log("-------", error.message, "-----------")
   }

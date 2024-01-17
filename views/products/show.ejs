@@ -17,7 +17,7 @@
                 <h4><%= product.description%></h4>
             </div>
             <div class="product-price">
-                Price: $<%= product.price %>
+                Price: $<%=product.price %>
             </div>
             <div class="product-id">
                 Product ID: <%= product.productId %>
@@ -28,6 +28,10 @@
             <div class="stock-quantity">
                 Stock Quanity: <%= product.stockQuantity %> pcs
             </div>
+            <br>
+            <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                <button class="delete-button">Delete</button>
+            </form>
         </div>
     </div>
 </body>

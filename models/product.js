@@ -15,7 +15,7 @@ const { Schema, model } = mongoose
 const productSchema = new Schema({
     productId: String,
     name: String,
-    categoryId: String,
+    category: String,
     price: Number,
     description: String,
     stockQuantity: Number,
