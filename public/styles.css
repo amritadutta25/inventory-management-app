@@ -20,7 +20,10 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: rgb(101, 57, 57);
+}
+
+header h1, a {
+    color:rgb(101, 57, 57);
 }
 
 /* ------------------- */
@@ -45,8 +48,7 @@ header {
 }
 
 hr {
-    /* border: none;
-    height: 1px; */
+    flex-grow: 1;
     color: #333;
 }
 
@@ -86,7 +88,7 @@ hr {
     margin: 20px 0;
 }
 
-.divider hr {
+hr {
     flex-grow: 1;
 }
 
@@ -112,7 +114,7 @@ p a:hover {
 }
 
 /* ------------------- */
-/* FORM styling */
+/* Input and button styling in FORMS */
 /* ------------------- */
 
 form {
@@ -209,8 +211,6 @@ button[type="submit"]:hover, input[type="submit"]:hover {
     width: 500px;
     height: 500px;
     overflow: hidden; /* Ensures that the image doesn't exceed the container's boundaries */
-
-    
 }
 
 .show-product-img img {
@@ -221,6 +221,8 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 
 .show-product-details {
     color: rgb(101, 57, 57);
+    border-left: 1px solid #6D5546;
+    padding-left: 20px;
 }
 
 .show-product-details form {
@@ -254,6 +256,32 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 
+/* ------------------- */
+/* SIGNUP and LOGIN page */
+/* ------------------- */
+
+.signup-form, .login-form {
+    margin-top: 8%;
+}
+
+.signup-form fieldset, .login-form fieldset {
+    border: 1px solid #785E4D;
+    padding: 100px;
+    margin: 0;
+}
+
+.signup-form legend, .login-form legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #775b48;
+}
+
+.signup-form label, .login-form label {
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
 
 /* ============================
 MOBILE VIEW
@@ -278,6 +306,15 @@ MOBILE VIEW
         width: 70%;
         margin: 0 auto;
         margin-top: 30px;
+    }
+
+    /* SHOW page */
+    .show-product-details {
+        color: rgb(101, 57, 57);
+        border-top: 1px solid #6D5546;
+        border-left: none;
+        padding-top: 20px;
+        margin-left: 20px;
     }
 
 
