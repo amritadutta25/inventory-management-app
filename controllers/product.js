@@ -8,7 +8,7 @@ const router = express.Router() // create router
 // Middleware - to check if user is logged in, only then make the 'product' routes accesible
 router.use((req, res, next) => {
     console.table(req.session) // req.session is not part of express, we created session middleware in server.js
-  
+    console.log(req.session.loggedIn)
     if (req.session.loggedIn) {
       next()
     } else {

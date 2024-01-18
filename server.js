@@ -32,7 +32,7 @@ registerRouters(app)
 
 // routes
 app.get("/", (req, res) => {
-    res.send("It's Working...")
+    res.render("user/landing.ejs")
 })
 
 // turn on the server (the listener)

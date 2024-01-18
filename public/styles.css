@@ -6,6 +6,11 @@ body {
     font-family: Noto Sans;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 h3 {
     font-weight: 600;
     font-size: 1.3em;
@@ -17,6 +22,127 @@ header {
     align-items: center;
     color: rgb(101, 57, 57);
 }
+
+/* ------------------- */
+/* Landing Page */
+/* ------------------- */
+.container {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* 100% of the viewport width */
+    height: 100%; /* 100% of the viewport height */    
+}
+
+
+.left-container {
+    background-color: #D3A588;
+    color: rgb(101, 57, 57);
+    padding-top: 30%;
+    padding-left: 25%;
+    padding-right: 20px;
+    text-align: end;
+}
+
+hr {
+    /* border: none;
+    height: 1px; */
+    color: #333;
+}
+
+
+.left-container h2, p {
+    justify-content: flex-end;
+}
+
+.right-container {
+    background-color: white;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 15%;
+
+}
+
+.right-container h2 {
+    color: #846755;
+}
+
+.google-login, .facebook-login {
+    background-color: #dd4b39;  /* Google button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 15px;
+    width: 90%;
+}
+
+.facebook-login {
+    background-color: #3b5998; /* Facebook button color */
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.divider hr {
+    flex-grow: 1;
+}
+
+.divider span {
+    margin: 0 10px;
+    color: #846755;
+}
+
+
+/* Link to Signup Page */
+p {
+    color: #333;
+    margin-top: 15px;
+}
+
+p a {
+    color:#846755;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------- */
+/* FORM styling */
+/* ------------------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #A8836D;
+    width: 100%;
+}
+
+button[type="submit"], input[type="submit"] {
+    background-color: #846755;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-top: 1px;
+    width: 90%;
+}
+
+button[type="submit"]:hover, input[type="submit"]:hover {
+    background-color: #A07D68;
+}
+
 
 /* ------------------- */
 /* INDEX Page */
@@ -97,8 +223,13 @@ header {
     color: rgb(101, 57, 57);
 }
 
+.show-product-details form {
+    display: block;
+}
 
-/* FORM  */
+/* ------------------- */
+/* NEW and EDIT FORM styling  */
+/* ------------------- */
 
 .product-form {
     max-width: 600px;
@@ -118,30 +249,36 @@ header {
 .product-form label {
     display: block;
     margin-bottom: 10px;
-    color: #233cb5;
+    color: #785E4D;
     font-weight: bold;
 }
 
-.product-form input[type="text"] {
-    width: 100%;
-    padding: 8px 10px;  /* padding to increase the field height and width */
-    margin-top: 5px;
-    border: 1px solid rgb(137, 133, 133);
-    border-radius: 4px;
-}
 
-.product-form input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #32cd32;
-    color: white;
-    border-radius: 4px;
-    margin-top: 15px;
-    font-size: 1em;
-}
 
-.product-form input[type="submit"]:hover {
-    background-color: #228b22;
-}
+/* ============================
+MOBILE VIEW
+==============================*/
+@media screen and (max-width: 600px) { 
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .left-container {
+        text-align: center;
+        background-color: #D3A588;
+        color: rgb(101, 57, 57);
+        padding-top: 20%;
+        padding-left: 10%;
+        padding-right: 20px;
+        height: 50%;
+    }
+
+    .right-container {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+
+}
