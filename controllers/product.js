@@ -2,14 +2,27 @@
 const express = require("express") // import express
 const Product = require("../models/product.js") // import 'Product' model
 
-const router = express.Router() // import router
+const router = express.Router() // create router
 
+
+// Middleware - to check if user is logged in, only then make the 'product' routes accesible
+router.use((req, res, next) => {
+    console.table(req.session) // req.session is not part of express, we created session middleware in server.js
+  
+    if (req.session.loggedIn) {
+      next()
+    } else {
+      res.redirect("/user/login")
+    }
+})
 
 // INDEX route -> GET request to /products
 router.get("/", async (req, res) => {
     try {
-        // get all products
-        const products = await Product.find()
+        // get username from req.session
+        const username = req.session.username
+        // get all products for the user only
+        const products = await Product.find({username})
 
         res.render("products/index.ejs", {products})
 
@@ -28,7 +41,9 @@ router.get("/new", (req, res) => {
 // CREATE Route -> Post request to /products
 router.post("/", async (req, res) => {
     try {
-        console.log(req.body)
+        // adding user to req.body from req.session, this will be used in index route to get products belonging to only a particular user
+        req.body.username = req.session.username
+
         // create the product in the database
         await Product.create(req.body);
         // redirect back to main page

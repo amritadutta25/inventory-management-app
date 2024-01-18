@@ -19,7 +19,8 @@ const productSchema = new Schema({
     price: Number,
     description: String,
     stockQuantity: Number,
-    image: String
+    image: String,
+    username: String
 })
 
 // Model - object for interacting with the database
