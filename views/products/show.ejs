@@ -23,15 +23,20 @@
                 Product ID: <%= product.productId %>
             </div> 
             <div class="product-catid">
-                Category ID: <%= product.categoryId %>
+                Category: <%= product.category %>
             </div> 
             <div class="stock-quantity">
                 Stock Quanity: <%= product.stockQuantity %> pcs
             </div>
             <br>
+            <!-- edit button -->
+            <a href="/products/<%= product._id %>/edit"><button>Edit</button></a>
+
+            <!-- delete button -->
             <form action="/products/<%= product._id %>?_method=DELETE" method="POST">
                 <button class="delete-button">Delete</button>
             </form>
+
         </div>
     </div>
 </body>

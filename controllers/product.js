@@ -40,7 +40,39 @@ router.post("/", async (req, res) => {
     }
 })
 
+// EDIT Route -> get request to /products/:id/edit
+router.get("/:id/edit", async (req, res) => {
+    try {
+        // product id to be edited
+        const id = req.params.id
 
+        const product = await Product.findById(id)
+
+        res.render("products/edit.ejs", {product})
+
+    } catch (error) {
+        console.log("-----", error.message, "------");
+        res.status(400).send("error, read logs for details");
+    }
+})
+
+// UPDATE route -> put request to /products/:id
+router.put("/:id", async (req, res) => {
+    try {
+        // get the id of the product to be updated
+        const id = req.params.id
+
+        // update the product
+        await Product.findByIdAndUpdate(id, req.body)
+
+        // redirect to show page of the product
+        res.redirect(`/products/${id}`);
+
+    } catch (error) {
+        console.log("-----", error.message, "------");
+        res.status(400).send("error, read logs for details");
+    }
+})
 
 
 // DELETE route - delete request to /products/:id

@@ -18,7 +18,10 @@ header {
     color: rgb(101, 57, 57);
 }
 
+/* ------------------- */
 /* INDEX Page */
+/* ------------------- */
+
 .index-page {
     display: flex;
     justify-content: space-around;
@@ -59,7 +62,15 @@ header {
     margin-bottom: 5px;
 }
 
+.out-stock {
+    color: red;
+    font-weight: 600;
+}
+
+/* ------------------- */
 /* SHOW PAGE */
+/* ------------------- */
+
 .show-page {
     display: flex;
     justify-content: space-around;

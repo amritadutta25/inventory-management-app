@@ -21,7 +21,15 @@
                   Product ID: <%= product.productId %>
                 </div> 
                 <div class="stock-status">
-                  <%= product.stockQuantity > 0 ? "In stock" : "Out of stock" %>
+                  <% if (product.stockQuantity > 0) { %>
+                      <div class="in-stock">
+                        In Stock
+                      </div>
+                  <% } else { %>
+                      <div class="out-stock">
+                        Out of Stock
+                      </div>
+                  <% } %>
                 </div>
               </div>
               

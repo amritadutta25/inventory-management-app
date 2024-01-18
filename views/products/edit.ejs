@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    
+    <div class="form-product-heading">
+        <h1>New Product Page</h1>
+    </div>
+
+    <form class="product-form" action="/products/<%= product._id %>?_method=PUT" method="post">
+        <fieldset>
+            <label>Name: <input type="text" name="name" value="<%= product.name %>" /></label>
+
+            <label>Product ID: <input type="text" name="productId" value="<%= product.productId %>"/></label>
+            
+            <label>Category: <input type="text" name="category" value="<%= product.category %>"/></label>
+
+            <label>Description: <input type="text" name="description" value="<%= product.description %>" /></label>
+
+            <label>Price: <input type="text" name="price" value="<%= product.price %>"/></label>
+
+            <label>Stock Quantity: <input type="text" name="stockQuantity" value="<%= product.stockQuantity %>"/></label>
+
+            <label>Image URL: <input type="text" name="image" value="<%= product.image %>"/></label>
+
+        </fieldset>
+        <input type="submit" value="Edit Product" >
+
+        <br>
+        <a href="/products/"><button>Back to Home</button></a>
+    </form>
+        
+
+</body>
+</html>
