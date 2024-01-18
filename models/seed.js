@@ -130,7 +130,7 @@ const seedProducts = [
         username: 'amdutta'
     },
     {
-        productID: 14,
+        productId: 14,
         name: "TRONES Shoe Cabinet",
         category: "Storage & Organization",
         price: 39.99,
