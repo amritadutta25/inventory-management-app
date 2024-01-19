@@ -21,12 +21,16 @@ header {
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid #ccc;
+    background-color: #AC866F;
 }
 
 header h1, a {
     color:rgb(101, 57, 57);
 }
 
+header a {
+    font-weight: 600;
+}
 /* ------------------- */
 /* Landing Page */
 /* ------------------- */
@@ -40,8 +44,12 @@ header h1, a {
 
 
 .left-container {
-    background-color: #C9ADA1;
-     /* #D3A588; */
+    /* background-color: #C9ADA1; */
+    background-image: url("https://img.freepik.com/free-photo/home-entranceway-with-furniture-modern-decor_23-2150831846.jpg?t=st=1705697164~exp=1705700764~hmac=867aa10c1add98da805a49ebd7436e9327819f8970bd497ecfe5a0f24acecc19&w=996");
+    /* url("https://img.freepik.com/free-photo/minimal-amazing-interior-design_23-2150534582.jpg?t=st=1705697095~exp=1705700695~hmac=eb5a79567bfa2ec60964a0d8e85ac960dbee5359c5e2a5146eec5720b111c431&w=826"); */
+    /* url("https://img.freepik.com/premium-photo/beautiful-modern-room-with-comfy-armchair_180507-401.jpg"); */
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
     padding-top: 25%;
     padding-left: 25%;
     padding-right: 20px;
@@ -54,8 +62,11 @@ hr {
 }
 
 .left-container h2, p {
-    justify-content: flex-end;
     color: #524035;
+}
+
+.left-container p {
+    padding-left:100px;
 }
 
 .right-container {
@@ -102,6 +113,9 @@ hr {
 /* Link to Signup Page */
 p {
     font-weight: 340;
+}
+
+.signup p {
     margin-top: 15px;
 }
 
@@ -255,6 +269,7 @@ button[type="submit"]:hover, input[type="submit"]:hover {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #524035;
+    background-color: #AC866F;
 }
 
 .form-product-heading  h1{
@@ -296,7 +311,8 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 .step {
     display: flex;
     align-items: center;
-    width: 100%
+    width: 100%;
+    padding-left: 40px;
 }
 
 .step-circle {
@@ -351,7 +367,10 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 /* SIGNUP and LOGIN page */
 /* ------------------- */
 .signup-body {
-    background-image: url("https://wallpapers.com/images/hd/neutral-desktop-yddi8rj9p6appc0b.jpg") 
+    background-image: url("https://img.freepik.com/free-vector/neutral-soft-abstract-watercolor-background_53876-100960.jpg?w=1800&t=st=1705698858~exp=1705699458~hmac=b1c19fce528366f2f194aa38f3d3fc94b0ff5565da46962a97ebb3872004bb08");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 
 .signup-form, .login-form {
@@ -395,10 +414,16 @@ MOBILE VIEW
 
     .left-container {
         text-align: center;
-        padding-top: 25%;
+        padding-top: 0;
         padding-left: 10%;
         height: 50%;
     }
+
+    .left-container p {
+        margin-top: 0;
+        margin-left: 55px;
+    }
+
 
     .right-container {
         width: 70%;
