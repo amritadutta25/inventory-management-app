@@ -44,14 +44,12 @@ header a {
 
 
 .left-container {
-    /* background-color: #C9ADA1; */
-    background-image: url("https://img.freepik.com/free-photo/home-entranceway-with-furniture-modern-decor_23-2150831846.jpg?t=st=1705697164~exp=1705700764~hmac=867aa10c1add98da805a49ebd7436e9327819f8970bd497ecfe5a0f24acecc19&w=996");
-    /* url("https://img.freepik.com/free-photo/minimal-amazing-interior-design_23-2150534582.jpg?t=st=1705697095~exp=1705700695~hmac=eb5a79567bfa2ec60964a0d8e85ac960dbee5359c5e2a5146eec5720b111c431&w=826"); */
-    /* url("https://img.freepik.com/premium-photo/beautiful-modern-room-with-comfy-armchair_180507-401.jpg"); */
+    background-image: url("https://i.imgur.com/6iEnyoP.jpg");
+    /* url("https://img.freepik.com/free-photo/home-entranceway-with-furniture-modern-decor_23-2150831846.jpg?t=st=1705697164~exp=1705700764~hmac=867aa10c1add98da805a49ebd7436e9327819f8970bd497ecfe5a0f24acecc19&w=996"); */
     background-repeat: no-repeat; 
     background-size: 100% 100%;
     padding-top: 25%;
-    padding-left: 25%;
+    padding-left: 25%; 
     padding-right: 20px;
     text-align: end;
 }
@@ -367,7 +365,8 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 /* SIGNUP and LOGIN page */
 /* ------------------- */
 .signup-body {
-    background-image: url("https://img.freepik.com/free-vector/neutral-soft-abstract-watercolor-background_53876-100960.jpg?w=1800&t=st=1705698858~exp=1705699458~hmac=b1c19fce528366f2f194aa38f3d3fc94b0ff5565da46962a97ebb3872004bb08");
+    background-image: url("https://i.imgur.com/PsgaEvN.jpg");
+    /* url("https://img.freepik.com/free-vector/neutral-soft-abstract-watercolor-background_53876-100960.jpg?w=1800&t=st=1705698858~exp=1705699458~hmac=b1c19fce528366f2f194aa38f3d3fc94b0ff5565da46962a97ebb3872004bb08"); */
     background-size: cover;
     background-repeat: no-repeat;
     
