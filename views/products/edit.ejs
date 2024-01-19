@@ -4,34 +4,55 @@
     <%- include("../partials/head.ejs") %>
 </head>
 <body>
-    
-    <div class="form-product-heading">
-        <h1>Edit Product</h1>
-    </div>
+    <div class="edit-form">
+        <div class="form-product-heading">
+            <h1>Edit Product</h1>
+            <a href="/products">Home</a>
+        </div>
 
-    <form class="product-form" action="/products/<%= product._id %>?_method=PUT" method="post">
-        <fieldset>
-            <label>Name: <input type="text" name="name" value="<%= product.name %>" /></label>
+        <div class="page-body">
+            <div class="steps-container">
+                <div class="steps-heading">
+                    <h3>Update product information by filling out the form</h3>
+                </div>
+                <div class="step">
+                    <div class="step-circle">1</div>
+                    <div class="step-title">Want to update Product description?</div>
+                </div>
+                <div class="connector"></div>
+                <div class="step">
+                    <div class="step-circle">2</div>
+                    <div class="step-title">Want to update Product ID and price?</div>
+                </div>
+                <div class="connector"></div>
+                <div class="step">
+                    <div class="step-circle">3</div>
+                    <div class="step-title">Want to update product image for easy identification? </div>
+                </div>
+            </div>
 
-            <label>Product ID: <input type="text" name="productId" value="<%= product.productId %>"/></label>
-            
-            <label>Category: <input type="text" name="category" value="<%= product.category %>"/></label>
+            <form class="product-form" action="/products/<%= product._id %>?_method=PUT" method="post">
+                <fieldset>
+                    <label>Name: <input type="text" name="name" value="<%= product.name %>" /></label>
 
-            <label>Description: <input type="text" name="description" value="<%= product.description %>" /></label>
+                    <label>Product ID: <input type="text" name="productId" value="<%= product.productId %>"/></label>
+                    
+                    <label>Category: <input type="text" name="category" value="<%= product.category %>"/></label>
 
-            <label>Price: <input type="text" name="price" value="<%= product.price %>"/></label>
+                    <label>Description: <input type="text" name="description" value="<%= product.description %>" /></label>
 
-            <label>Stock Quantity: <input type="text" name="stockQuantity" value="<%= product.stockQuantity %>"/></label>
+                    <label>Price: <input type="text" name="price" value="<%= product.price %>"/></label>
 
-            <label>Image URL: <input type="text" name="image" value="<%= product.image %>"/></label>
+                    <label>Stock Quantity: <input type="text" name="stockQuantity" value="<%= product.stockQuantity %>"/></label>
 
-        </fieldset>
-        <input type="submit" value="Update Product" >
+                    <label>Image URL: <input type="text" name="image" value="<%= product.image %>"/></label>
 
-        <br>
-        <a href="/products/"><button>Back to Home</button></a>
-    </form>
-        
+                </fieldset>
+                <input type="submit" value="Update Product" >
+
+            </form>
+        </div>
+    </div>   
 
 </body>
 </html>

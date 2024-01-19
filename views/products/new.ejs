@@ -4,34 +4,58 @@
     <%- include("../partials/head.ejs") %>
 </head>
 <body>
-    
-    <div class="form-product-heading">
-        <h1>New Product Page</h1>
-    </div>
+    <div class="new-form">
+        <div class="form-product-heading">
+            <h1>New Product Page</h1>
+            <a href="/products">Home</a>
+        </div>
 
-    <form class="product-form" action="/products" method="post">
-        <fieldset>
-            <label>Name: <input type="text" name="name" placeholder="Name of product" /></label>
+        <div class="page-body">
+            <div class="steps-container">
+                <div class="steps-heading">
+                    <h3>3 easy steps to add item to inventory</h3>
+                </div>
+                <div class="step">
+                    <div class="step-circle">1</div>
+                    <div class="step-title">Step 1- Provide Product description</div>
+                </div>
+                <div class="connector"></div>
+                <div class="step">
+                    <div class="step-circle">2</div>
+                    <div class="step-title">Step 2- Provide Product ID and price</div>
+                </div>
+                <div class="connector"></div>
+                <div class="step">
+                    <div class="step-circle">3</div>
+                    <div class="step-title">Step 3- Link the product image for easy identification </div>
+                </div>
+            </div>
 
-            <label>Product ID: <input type="text" name="productId" placeholder="Product Id"/></label>
-            
-            <label>Category: <input type="text" name="category" placeholder="Category of the product"/></label>
-
-            <label>Description: <input type="text" name="description" placeholder="Short description of product" /></label>
-
-            <label>Price: <input type="text" name="price" placeholder="Price of the product per unit"/></label>
-
-            <label>Stock Quantity: <input type="text" name="stockQuantity" placeholder="Number of units in stock"/></label>
-
-            <label>Image URL: <input type="text" name="image" placeholder="Image link of product"/></label>
-
-        </fieldset>
-        <input type="submit" value="Create Product" >
-
-        <br>
-        <a href="/products/"><button>Back to Home</button></a>
-    </form>
+            <form class="product-form" action="/products" method="post">
+                <fieldset>
+                    <label>Name: <input type="text" name="name" placeholder="Name of product" /></label>
         
-
+                    <label>Product ID: <input type="text" name="productId" placeholder="Product Id"/></label>
+                    
+                    <label>Category: <input type="text" name="category" placeholder="Category of the product"/></label>
+        
+                    <label>Description: <input type="text" name="description" placeholder="Short description of product" /></label>
+        
+                    <label>Price: <input type="text" name="price" placeholder="Price of the product per unit"/></label>
+        
+                    <label>Stock Quantity: <input type="text" name="stockQuantity" placeholder="Number of units in stock"/></label>
+        
+                    <label>Image URL: <input type="text" name="image" placeholder="Image link of product"/></label>
+        
+                </fieldset>
+                <input type="submit" value="Add product to inventory" >
+        
+                
+            </form>
+        </div>
+    
+        
+    </div>
+    
 </body>
 </html>

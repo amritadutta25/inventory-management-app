@@ -5,7 +5,14 @@
 </head>
 <body>
     <%- include("../partials/header.ejs") %>
+    <% if (products.length === 0) { %>
+      <div class="zero-products">
+        <p>Hi! You have no item in your inventory. Please add new products.</p>
+      </div>
+     
+    <% } else { %>
       <div class="index-page">
+
         <% for (product of products) { %>            
             <div class="product">
               <div class="product-img">
@@ -36,5 +43,6 @@
             </div> 
         <% } %>
       </div>
+    <% } %>
 </body>
 </html>

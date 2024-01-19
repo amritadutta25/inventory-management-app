@@ -23,11 +23,12 @@ router.post("/signup", async (req, res) => {
     )
 
     console.log("Hashed Password:", req.body.password)
-
+    
     //create the user
     await User.create(req.body)
     
-    // saving loggedIn as true so that we can redirect to /products route after signup since /products (Index route) needs user to be loggedIn to access it.
+    // saving username and loggedIn as true so that we can redirect to /products route after signup because /products (Index route) will get only the products belonging to the user and the route needs user to be loggedIn to access it.
+    req.session.username = req.body.username
     req.session.loggedIn = true
 
     //redirect user to homepage

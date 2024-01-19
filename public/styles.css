@@ -20,6 +20,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 1px solid #ccc;
 }
 
 header h1, a {
@@ -39,9 +40,9 @@ header h1, a {
 
 
 .left-container {
-    background-color: #D3A588;
-    color: rgb(101, 57, 57);
-    padding-top: 30%;
+    background-color: #C9ADA1;
+     /* #D3A588; */
+    padding-top: 25%;
     padding-left: 25%;
     padding-right: 20px;
     text-align: end;
@@ -52,9 +53,9 @@ hr {
     color: #333;
 }
 
-
 .left-container h2, p {
     justify-content: flex-end;
+    color: #524035;
 }
 
 .right-container {
@@ -100,7 +101,7 @@ hr {
 
 /* Link to Signup Page */
 p {
-    color: #333;
+    font-weight: 340;
     margin-top: 15px;
 }
 
@@ -155,6 +156,14 @@ button[type="submit"]:hover, input[type="submit"]:hover {
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: #ECE2D0;
+}
+
+.zero-products {
+    background-color: white;
+    color:#544135;
+    text-align: center;
+    font-size: 1.7em;
+    margin-top: 10%;
 }
 
 .product {
@@ -229,9 +238,89 @@ button[type="submit"]:hover, input[type="submit"]:hover {
     display: block;
 }
 
+.edit-button, .delete-button {
+    background-color: #846755;
+}
+
 /* ------------------- */
 /* NEW and EDIT FORM styling  */
 /* ------------------- */
+.new-form, .edit-form {
+    background-color: #E7DBC8;
+}
+
+.form-product-heading {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #524035;
+}
+
+.form-product-heading  h1{
+    color: #524035;
+    margin-left: 300px;
+}
+
+.form-product-heading a {
+    color:#524035;
+    text-decoration: none;
+    margin-left: 300px;
+    font-weight: 700;
+    font-size: large;
+    
+}
+    
+.form-product-heading a:hover {
+    text-decoration: underline;
+}
+
+.page-body {
+    display:flex;
+}
+
+.steps-heading {
+    color: #524035;
+    margin-bottom: 15px;
+    margin-left: 0;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 100px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    width: 100%
+}
+
+.step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Makes the div circular */
+    background-color: #524035;
+    color: white;
+
+    /* To center the numbers inside the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connector {
+    width: 3px; /* Width of the connector line */
+    height: 70px; /* Height of the connector line */
+    background-color: #4d4646;
+}
+
+.step-title {
+   margin-left: 15px;
+}
 
 .product-form {
     max-width: 600px;
@@ -256,9 +345,14 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 
+
+
 /* ------------------- */
 /* SIGNUP and LOGIN page */
 /* ------------------- */
+.signup-body {
+    background-image: url("https://wallpapers.com/images/hd/neutral-desktop-yddi8rj9p6appc0b.jpg") 
+}
 
 .signup-form, .login-form {
     margin-top: 8%;
@@ -287,6 +381,13 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 MOBILE VIEW
 ==============================*/
 @media screen and (max-width: 600px) { 
+    /* Header */
+    header {
+        flex-direction: column;
+    }
+
+    /* Landing Page */
+
     .container {
         display: flex;
         flex-direction: column;
@@ -294,11 +395,8 @@ MOBILE VIEW
 
     .left-container {
         text-align: center;
-        background-color: #D3A588;
-        color: rgb(101, 57, 57);
-        padding-top: 20%;
+        padding-top: 25%;
         padding-left: 10%;
-        padding-right: 20px;
         height: 50%;
     }
 
@@ -315,6 +413,35 @@ MOBILE VIEW
         border-left: none;
         padding-top: 20px;
         margin-left: 20px;
+    }
+
+    /* NEW and EDIT form */
+    .form-product-heading {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-product-heading  h1{
+        margin-left: 0;
+    }
+
+    .form-product-heading a {
+        margin-left: 0;
+        
+    }
+    
+    /* NEW and EDIT Pages */
+    .page-body {
+        flex-direction: column;
+    }
+
+    .steps-container {
+        margin-top: 15%;
+        margin-left: 30px;
+        margin-bottom: 30px;
     }
 
 
